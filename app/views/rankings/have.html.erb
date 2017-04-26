@@ -1,4 +1,4 @@
-<h1>Wantランキング</h1>
+<h1>Haveランキング</h1>
 <% if @items.present? %>
 
   <div class="row">
@@ -21,8 +21,8 @@
                 
 <% if logged_in? %>
 
-<%= render 'ownerships/have_button', item: item %>   
-<%= render 'ownerships/want_button', item: item %>
+<%= render 'ownerships/want_button', item: item %>                  
+<%= render 'ownerships/have_button', item: item %>
 
                 
 <% end %>
