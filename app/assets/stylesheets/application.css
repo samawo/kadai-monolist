@@ -23,7 +23,7 @@ footer{
   background: url("/images/cover-bg.jpg") center center no-repeat;
   background-size: cover;
 }
-.cover .inner{
+.cover .cover-inner{
   height: 100%;
   margin: auto;
   display: table;
