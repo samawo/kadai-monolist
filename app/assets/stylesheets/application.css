@@ -19,8 +19,8 @@ footer{
   margin-top: -20px;
   margin-bottom: 20px;
   width: 100%;
-  height: 300%;
-  background: url("/images/cover-bg.jeg") center center no-repeat;
+  height: 300px;
+  background: url("/images/cover-bg.jpg") center center no-repeat;
   background-size: cover;
 }
 .cover .inner{
@@ -50,7 +50,7 @@ footer{
 
 /* item */
 .item .panel-body {
-  height: 120px;
+  height: 170px;
 }
 .item .panel-heading {
   height: 250px;

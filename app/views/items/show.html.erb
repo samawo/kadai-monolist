@@ -3,24 +3,17 @@
     <div class="item">
       <div class="panel panel-default">
         <div class="panel-heading text-center">
-          <img src="
-<%= @item.image_url %>
-" alt="">
+          <img src="<%= @item.image_url %>" alt="">
         </div>
         <div class="panel-body">
           <p class="item-title">
-<%= @item.name %>
-</p>
+            <%= @item.name %>
+          </p>
           <div class="buttons text-center">
-            
-<% if logged_in? %>
-
-              
-<%= render 'ownerships/want_button', item: @item %>
-
-            
-<% end %>
-
+            <% if logged_in? %>
+              <%= render 'ownerships/want_button', item: @item %>
+              <%= render 'ownerships/have_button', item: @item %>
+            <% end %>
           </div>
         </div>
       </div>
@@ -34,15 +27,9 @@
           Wantしたユーザ
         </div>
         <div class="panel-body">
-          
-<% @want_users.each do |user| %>
-
-            
-<%= link_to user.name, user_path(user) %>
-
-          
-<% end %>
-
+          <% @want_users.each do |user| %>
+            <%= link_to user.name, user_path(user) %>
+          <% end %>
         </div>
       </div>
     </div>
@@ -52,6 +39,9 @@
           Haveしたユーザ
         </div>
         <div class="panel-body">
+          <% @have_users.each do |user| %>
+            <%= link_to user.name, user_path(user) %>
+          <% end %>
         </div>
       </div>
     </div>
